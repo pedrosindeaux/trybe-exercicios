@@ -88,6 +88,9 @@ if (d + e + f === 180) {
          console.log("não identicado");
  }
 
+ //Setima parte 
+
+
 
 
 
