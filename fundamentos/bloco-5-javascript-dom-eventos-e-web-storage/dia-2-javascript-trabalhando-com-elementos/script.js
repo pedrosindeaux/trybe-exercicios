@@ -38,3 +38,33 @@ console.log(elementoOndeVoceEsta.nextElementSibling);
 //8.Agora acesse o terceiroFilho a partir de pai.
 
 console.log(document.querySelector('#pai').nextElementSibling);
+
+//2° contaéudo
+//1.Crie um irmão para elementoOndeVoceEsta.
+
+let container = document.querySelector('#pai');
+let brother = document.createElement('section');
+
+container.appendChild(brother);
+
+// 2.Crie um filho para elementoOndeVoceEsta.
+
+let container2 = document.querySelector('#elementoOndeVoceEsta');
+
+let sun = document.createElement('div');
+
+container2.appendChild(sun);
+
+ //3.Crie um filho para primeiroFilhoDoFilho.
+
+ let container3 = document.querySelector('#primeiroFilhoDoFilho');
+
+ let child2 = document.createElement('section');
+
+ container3.appendChild(child2);
+
+
+
+//4.  A partir desse filho criado, acesse terceiroFilho.  
+
+let terceiroFilho = child2.parentElement.parentElement.nextElementSibling;
