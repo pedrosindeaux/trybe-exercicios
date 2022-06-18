@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="formulario  speaker-form">
+      <h1>Trybe Trip</h1>
+      <p>Já pensou em ser sorteado para uma viagem para conhecer a apple?Preencha o formulário!</p>
+    </header>
+    <form action="" method="get" class=" speaker-form">
+      <div class="line-content">
+          <label for="name">Nome:</label>
+          <input
+          type="text"
+          id="name"
+          name="nome"
+          maxlength="40"
+          minlength="10"
+          placeholder="Digite o nome completo"
+          required
+          />
+          <br />
+          <br />
+          <label for="email">Email:</label>
+          <input
+          type="email"
+          id="email"
+          name="email"
+          maxlength="50"
+          minlength="10"
+          placeholder="Digite o seu email"
+          required
+          />
+        </div>
+        <br />
+          <br />
+<div class="line-content">    
+    <fieldset>
+        <legend>Qual o país de destino?</legend>
+        <input type="radio" id="country1" name="country" />
+        <label for="country1">Buenos Aires</label>
+        <input type="radio" id="country2" name="country" checked />
+        <label for="country2">Grand Canyon</label>
+        <input type="radio" id="country3" name="country" />
+        <label for="country3">Miami Beach</label>
+        <input type="radio" id="country4" name="country" />
+        <label for="country4">Hymalia</label>
+    </fieldset>
+</div>
+<br />
+          <br />
+<div class="line-content">
+
+    <label for="abstract"
+    >Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+    TrybeTrip?</label
+    >
+    <textarea class= "abstract-style" name="abstract" id="abstract" maxlength="500"></textarea>
+</div>
+<div class="line-content">
+    <br />
+    <br />
+    <p>Qual Mês você deseja viajar?</p>
+    <select name="calendar" id="calendar">
+        <option value="JA">Janeiro</option>
+        <option value="FV">Fevereiro</option>
+        <option value="MR">Março</option>
+        <option value="AB">Abril</option>
+    </select>
+</div>
+<div class="line-content">   
+    <br />
+    <br />
+    <label for="data">Qual a melhor data para realizar sua viagem?</label>
+    <input type="date" id="data" />
+</div>
+<div class="line-content">
+    <br />
+    <br />
+    <label for="oferta"
+    >Gostaria de receber outras incríveis oportunidades oferecidas pela
+    Trybe?</label
+    >
+    <input type="checkbox" id="oferta" name="oferta" />
+</div>
+<div class="line-content">
+   
+    <br />
+    <br />
+     <label for="sim"
+    >Concordo que imagens das minhas férias poderão ser usadas na divulgação
+    de concursos futuros.
+</label>
+<input type="checkbox" id="sim" required />
+</div>
+<br />
+<br />
+      <button type="submit" class="btnsubmit">Enviar</button>
+      <button type="reset">Limpar</button>
+      <script src="/script.js"></script>
+    </form>
+  </body>
+</html>
