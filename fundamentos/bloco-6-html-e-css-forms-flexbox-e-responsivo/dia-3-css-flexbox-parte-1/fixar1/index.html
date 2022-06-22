@@ -3,39 +3,63 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox - Flex Flow</title>
+    <title>CSS FLEXBOX - ORDER</title>
     <style>
-        
-      .box {
-        color: #9069EF;
-        background-color: rgb(243, 243, 243);
-        border: 2px solid #232525;
-        font-size: 50px;
-        height: 60px;
-        margin: 10px 5px;
-        text-align: center;
-        width: 30%;
-      }
-
-      .box-container {
-        background-color: #0fa36b;
+      .container {
+        border: 1px solid black;
         display: flex;
-        flex-direction: row;
-        flex-flow: column ;
+        height: 50px;
+        margin: auto;
+        width: 500px;
       }
-    </style>
 
+      .box {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 125px;
+      }
+
+      .one {
+        background-color: #FBD26A;
+        display: flex;
+        /* Altere a propriedade order. */
+        order: 1;
+        list-style: none;
+      }
+
+      .two {
+        background-color: #FAA488;
+        display: flex;
+        /* Altere a propriedade order. */
+        order: 2;
+        list-style: none;
+      }
+
+      .three {
+        background-color: #9069EF;
+        display: flex;
+        /* Altere a propriedade order. */
+        order: 3;
+        list-style: none;
+      }
+
+      .four {
+        background-color: #006472;
+        display: flex;
+        /* Altere a propriedade order. */
+        order: 4;
+        list-style: none;
+      }
+
+    </style>
   </head>
   <body>
-      <!--1 - Teste as possibilidades (row, column, row-reverse e column-reverse) para a propriedade flex-direction.
-2 - Teste as possibilidades (wrap e nowrap) para a propriedade flex-wrap.
-3 - Teste as possibilidades para a propriedade flex-flow. -->
-    <div class="box-container">
-      <div class="box">1</div>
-      <div class="box">2</div>
-      <div class="box">3</div>
-      <div class="box">4</div>
-      <div class="box">5</div>
-    </div>
+    <ul class="container">
+      <li class="box one">1</li>
+      <li class="box two">2</li>
+      <li class="box three">3</li>
+      <li class="box four">4</li>
+    </ul>
   </body>
 </html>
