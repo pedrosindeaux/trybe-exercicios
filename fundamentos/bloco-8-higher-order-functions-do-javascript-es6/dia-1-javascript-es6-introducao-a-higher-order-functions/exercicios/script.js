@@ -1,4 +1,6 @@
 
+//1 - Crie uma função que retorne um objeto no formato { nomeCompleto, email } representando uma nova pessoa contratada. Passe sua função como parâmetro da HOF newEmployees para criar cada pessoa contratada em seu respectivo id. A sua função deve receber como parâmetro o nome completo da pessoa funcionária e a partir dele gerar automaticamente um email no formato nome_da_pessoa@trybe.com.
+
 const newPerson = (name) => {
     const email = name.toLowerCase().split(' ').join('_');
     return { email, email: `${email}@gmail.com`};
@@ -15,3 +17,22 @@ const newEmployees = (callback) => {
 
   console.log(newEmployees(newPerson));
 
+  //2 - Desenvolva uma HOF que retorna o resultado de um sorteio. Esta HOF irá gerar um número aleatório entre 1 e 5 recebendo como parâmetros o número apostado e uma função que checa se o número apostado é igual ao número sorteado. O retorno da sua HOF deve ser uma string (Ex: "Tente novamente" ou "Parabéns você ganhou").
+
+  const array = [];
+
+  Math.random();
+  Math.floor(Math.random() * 10 + 1)
+
+  function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+  
+  const compare2= (number,numberRandom) => number === numberRandom;
+  const maxRandom = (number,callback)=> {
+   const numberRandom =  Math.floor(Math.random()*(5) + 1);
+   return callback (number,numberRandom) ? "Parabéns você ganhou" :  "Tente novamente";
+    
+  }
+
+  console.log(maxRandom(2,compare2));
