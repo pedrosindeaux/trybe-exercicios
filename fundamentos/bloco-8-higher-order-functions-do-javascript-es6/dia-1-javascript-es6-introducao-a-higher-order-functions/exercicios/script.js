@@ -19,16 +19,16 @@ const newEmployees = (callback) => {
 
   //2 - Desenvolva uma HOF que retorna o resultado de um sorteio. Esta HOF irá gerar um número aleatório entre 1 e 5 recebendo como parâmetros o número apostado e uma função que checa se o número apostado é igual ao número sorteado. O retorno da sua HOF deve ser uma string (Ex: "Tente novamente" ou "Parabéns você ganhou").
 
-  const array = [];
+  /* const array = [];
 
   Math.random();
   Math.floor(Math.random() * 10 + 1)
 
   function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
-  }
+  } */
   
-  const compare2= (number,numberRandom) => number === numberRandom;
+  const compare2 = (number,numberRandom) => number === numberRandom;
   const maxRandom = (number,callback)=> {
    const numberRandom =  Math.floor(Math.random()*(5) + 1);
    return callback (number,numberRandom) ? "Parabéns você ganhou" :  "Tente novamente";
@@ -36,3 +36,47 @@ const newEmployees = (callback) => {
   }
 
   console.log(maxRandom(2,compare2));
+
+/* 
+  3 - Crie uma HOF que receberá três parâmetros:
+O primeiro será um array de respostas corretas (Gabarito);
+O segundo será um array contendo as respostas fornecidas por uma pessoa estudante;
+O terceiro é uma função que compara os dois arrays e então dá uma pontuação baseada nos acertos. Para isso essa função usará os seguintes critérios:
+Uma resposta correta adiciona 1 ponto à pontuação final;
+A ausência de uma resposta não altera a pontuação (quando for "N.A");
+Uma resposta incorreta reduz a pontuação final em 0.5 ponto.
+Ao final, a HOF deve retornar o total de pontos obtidos através das respostas fornecidas pela pessoa estudante. Utilize os seguintes arrays: */
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const compareStudentQuiz = (RIGHT_ANSWERS,STUDENT_ANSWERS) =>{
+
+if (RIGHT_ANSWERS === STUDENT_ANSWERS) {
+    return 1
+}
+
+if ( STUDENT_ANSWERS === "N.A") {
+    return 0;
+} else {
+    return 0.5
+}
+
+}
+
+const review =  (RIGHT_ANSWERS, STUDENT_ANSWERS, callback)=> {
+   let contador = 0;
+    for ( let i = 0; i < RIGHT_ANSWERS.length; i+=1) {
+        const somatorio = callback(RIGHT_ANSWERS[i],STUDENT_ANSWERS[i])
+        contador += somatorio;
+    } 
+
+    return `Nota final ${contador} do estudante da Trybe!!`
+
+}
+
+
+console.log(review(RIGHT_ANSWERS, STUDENT_ANSWERS,compareStudentQuiz));
+
+
+
