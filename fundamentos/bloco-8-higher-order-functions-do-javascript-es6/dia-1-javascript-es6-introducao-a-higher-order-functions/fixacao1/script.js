@@ -12,7 +12,7 @@ const sleepNow = () =>
   'Partiu dormir!!';
 
 const doingThings = (callback ) => {
-    return callback()
+    return callback
 }
 
 let message = doingThings(sleepNow);
